@@ -185,6 +185,9 @@ vendor.display.enable_optimize_refresh=1
 vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Dolby
 persist.vendor.audio_fx.current=dolby
 vendor.audio.dolby.ds2.enabled=true
