@@ -363,6 +363,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqti-perfd-client
 
+# Overlays
+PRODUCT_PACKAGES += \
+   PixelConfigOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr \
