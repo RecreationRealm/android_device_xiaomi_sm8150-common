@@ -69,6 +69,10 @@ on early-init
     write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
 
+    # Workarround for cache
+    rm /data/resource-cache
+    rm /data/system/package_cache 
+
 on init
 
     # Support legacy paths
