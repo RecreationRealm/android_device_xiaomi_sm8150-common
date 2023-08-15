@@ -285,9 +285,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
-# Lineage Health
+# LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_PACKAGES += \
