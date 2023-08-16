@@ -25,4 +25,8 @@
 
     <!-- For Enabling Battery Heath -->
     <bool name="config_supportBatteryHealth">true</bool>
+
+     <!-- ROM maintainer -->
+    <string name="build_maintainer_summary">dogpoopy</string>
+
 </resources>
