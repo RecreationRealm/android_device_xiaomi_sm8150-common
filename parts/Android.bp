@@ -22,5 +22,10 @@ android_app {
         "androidx.preference_preference",
         "org.lineageos.settings.resources",
         "SettingsLib",
-    ]
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+
 }
