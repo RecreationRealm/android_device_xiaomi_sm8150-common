@@ -29,28 +29,13 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Audio
-AUDIO_FEATURE_ENABLED_AHAL_EXT := false
-AUDIO_FEATURE_ENABLED_DLKM := true
-AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
-AUDIO_FEATURE_ENABLED_CON_THREAD := true
-AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
-AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
-AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
-AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 AUDIO_FEATURE_ENABLED_HDMI_SPK := true
-AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
-AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
-AUDIO_FEATURE_ENABLED_NT_PAUSE_TIMEOUT := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-AUDIO_FEATURE_ENABLED_SSR := false
-BOARD_SUPPORTS_OPENSOURCE_STHAL := true
-BOARD_SUPPORTS_QAHW := false
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-TARGET_PROVIDES_AUDIO_EXTNS := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bootloader
@@ -62,9 +47,6 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
-
-# ConfigStore
-TARGET_HAS_HDR_DISPLAY := true
 
 # Display
 TARGET_DISABLED_UBWC := true
@@ -98,10 +80,19 @@ TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_msmnile
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-BOARD_KERNEL_CMDLINE += kpti=off
-BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=qcom \
+    androidboot.console=ttyMSM0 \
+    androidboot.memcg=1 \
+    lpm_levels.sleep_disabled=1 \
+    msm_rtb.filter=0x237 \
+    service_locator.enable=1 \
+    swiotlb=2048 \
+    loop.max_part=7 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.init_fatal_reboot_target=recovery \
+    kpti=off \
+    cgroup_disable=pressure
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
